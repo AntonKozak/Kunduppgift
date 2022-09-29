@@ -1,0 +1,92 @@
+
+body{
+    background-color: beige;
+}
+ button {
+    background-color: #4CAF50;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+ }
+
+.water {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.row {
+    display: flex;
+    justify-content:space-around;
+}
+
+.row div {
+    margin: 0 25px 0 25px;
+}
+
+.column {
+    display: flex;
+    justify-content:center;
+
+}
+.column div {
+    margin: 30px;
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+}
+
+label, input, button {
+    margin: 10px;
+}
+
+
+.fieldset{
+    margin-bottom: 20px;
+    }
+
+.showLogin {
+    display: block;
+   
+}
+
+.hideLogin {
+    display: none;
+}
+
+
+h4 {
+    text-indent: 50px;
+  text-align: justify;
+  letter-spacing: 3px;
+  margin: 35px;
+}
+
+.footer {
+    width: 100%;
+    background-color: aliceblue;
+    height: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: larger;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    text-decoration-line:underline;
+    text-decoration-color: #eb1f04;
+    letter-spacing: 5px;
+}
+
+img {
+    border:3px solid #4CAF50;
+    border-radius: 8px;
+}
+
+img:hover {
+    box-shadow: 0 0 4px 6px #050705;
+}
