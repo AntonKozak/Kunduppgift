@@ -1,9 +1,9 @@
 
 
-const nameOrd = document.getElementById("username");  // variebls with value from input
+const nameOrd = document.getElementById("username"); 
 const losenOrd = document.getElementById("pass");
 
-if (!checkLoginStatus()) {   // check status if its true or false and efter starting the function
+if (!checkLoginStatus()) {   
     console.log('Need to login')
     document.getElementById("login").style.display = "block"
     document.getElementById("inloggad").style.display = "none"
@@ -15,11 +15,11 @@ if (!checkLoginStatus()) {   // check status if its true or false and efter star
     generateContent()
 }
 
-function login() {  // function to check value in input
+function login() { 
     var user = document.getElementById("username").value;
     var pass = document.getElementById("pass").value;
 
-    if (user == "Sara" && pass == "qwe123") { // if sara and 1234 true then you get välkommen if false you gonna get fel
+    if (user == "Sara" && pass == "qwe123") { 
         generateContent()
         performLogin();
     } else {
@@ -28,24 +28,24 @@ function login() {  // function to check value in input
 }
 
 
-function performLogin() { // set status to true
+function performLogin() { 
     localStorage.setItem('isLoggedIn', JSON.stringify(true))
     document.getElementById("login").style.display = "none"
     document.getElementById("inloggad").style.display = "flex"
 }
 
-function performLogout() { // set status to false
+function performLogout() { 
     clearContent()
     localStorage.setItem('isLoggedIn', JSON.stringify(false))
     document.getElementById("login").style.display = "block"
     document.getElementById("inloggad").style.display = "none"
 }
 
-function checkLoginStatus() { // status true or false
+function checkLoginStatus() { 
     return Boolean(JSON.parse(localStorage.getItem('isLoggedIn')))
 }
 
-function generateContent() {  // function which generate html code if log in true
+function generateContent() {  
     const wellcomeMessage = 'välkommen, du är nu inloggad det är test';
     const content = `
     <div id="inloggad" class="center">
@@ -54,7 +54,7 @@ function generateContent() {  // function which generate html code if log in tru
     </div>`;
 
     document.querySelector('#content').innerHTML = content;
-    // document.getElementById('content').innerHTML = content;  // diferent types of set the html code
+    // document.getElementById('content').innerHTML = content;  // diferent types to set the html code
     // document.getElementById('content').insertAdjacentHTML(
     //     "beforeend", document.getElementById('content').innerText
     // );
